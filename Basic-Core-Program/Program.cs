@@ -6,18 +6,32 @@ using System.Threading.Tasks;
 
 namespace Basic_Core_Program
 {
-   class EvenOROdd
+   class VowelorConsonant
    {
         static void Main(string[] args)
         {
-            int n;
-            Console.WriteLine("enter a number");
-            n = Convert.ToInt32(Console.ReadLine());
-            if (n % 2 == 0)
-                Console.WriteLine("{0} number is even number",n);
-            else
-                Console.WriteLine("{0} number is odd number",n);
-               Console.ReadLine();
+            Char ch;
+            Console.WriteLine("enter a character");
+            ch = Convert.ToChar(Console.ReadLine());
+            switch(ch)
+            {
+                case 'A':
+                case 'a':
+                case 'E':
+                case 'e':
+                case 'I':
+                case 'i':
+                case 'O':
+                case 'o':
+                case 'U':
+                case 'u':
+                    Console.WriteLine("{0} character is a vowel", ch);
+                    break;
+                default:
+                    Console.WriteLine("{0} character is a consonant", ch);
+                    break;
+            }
+            Console.ReadLine();
         }
     }
 }
