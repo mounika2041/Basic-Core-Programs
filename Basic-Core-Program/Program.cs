@@ -6,31 +6,32 @@ using System.Threading.Tasks;
 
 namespace Basic_Core_Program
 {
-   class VowelorConsonant
+   class MaximumNumber
    {
         static void Main(string[] args)
         {
-            Char ch;
-            Console.WriteLine("enter a character");
-            ch = Convert.ToChar(Console.ReadLine());
-            switch(ch)
+            int num1, num2, num3;
+            Console.WriteLine("enter a 1st number");
+            num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter a 2nd  number");
+            num2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter a 3rd  number");
+            num3 = Convert.ToInt32(Console.ReadLine());
+            if (num1 > num2)
             {
-                case 'A':
-                case 'a':
-                case 'E':
-                case 'e':
-                case 'I':
-                case 'i':
-                case 'O':
-                case 'o':
-                case 'U':
-                case 'u':
-                    Console.WriteLine("{0} character is a vowel", ch);
-                    break;
-                default:
-                    Console.WriteLine("{0} character is a consonant", ch);
-                    break;
+                if (num1 > num3)
+                {
+                    Console.WriteLine(" 1st number is greatest among three");
+                }
+                else
+                {
+                    Console.WriteLine(" 3rd number is greatest among three");
+                }
             }
+            else if (num2 > num3)
+                Console.WriteLine("2nd number is greatest among three");
+            else
+                Console.WriteLine(" 3rd number is greatest among three");
             Console.ReadLine();
         }
     }
