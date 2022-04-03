@@ -6,32 +6,18 @@ using System.Threading.Tasks;
 
 namespace Basic_Core_Program
 {
-   public class SwapNumbers
+   class EvenOROdd
    {
-        public int first, second, temp = 0;
-
-        public void SwapTwoNumbers()
+        static void Main(string[] args)
         {
-
-            Console.WriteLine("Please enter first number");
-            first = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Please enter second number");
-            second = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Before swapping");
-            Console.WriteLine("Fitst:{0} second:{1}", first, second);
-            temp = first;
-            first = second;
-            second = temp;
-            Console.WriteLine("after swapping");
-            Console.WriteLine("Fitst:{0} second:{1}", first, second);
-        }
-
-        private static void Main(string[] args)
-        {
-            SwapNumbers swap = new SwapNumbers();
-            swap.SwapTwoNumbers();
-            Console.ReadLine();
+            int n;
+            Console.WriteLine("enter a number");
+            n = Convert.ToInt32(Console.ReadLine());
+            if (n % 2 == 0)
+                Console.WriteLine("{0} number is even number",n);
+            else
+                Console.WriteLine("{0} number is odd number",n);
+               Console.ReadLine();
         }
     }
 }
