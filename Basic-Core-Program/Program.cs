@@ -6,11 +6,32 @@ using System.Threading.Tasks;
 
 namespace Basic_Core_Program
 {
-    class Program
+    class FlipCoin
     {
-        static void Main(string[] args)
+        public static void FindFlipCoinCount()
+        {
+            int tailcount = 0, headcount = 0;
+            Random random = new Random();
+            Console.WriteLine("enter number of times to flipcoin");
+            int numberofTimes = Convert.ToInt32(Console.ReadLine());
+            for (int i = 1; i < numberofTimes; i++)
+            {
+                double input = random.NextDouble();
+                if (input < 0.5)
+                    tailcount++;
+                else
+                    headcount++;
+            }
+            Console.WriteLine("headcount:{0} tailcount:{1}", headcount, tailcount);
+            double headPercentage = (headcount * 100) / numberofTimes;
+            double tailPercentage = (tailcount * 100) / numberofTimes;
+            Console.WriteLine("Head percentage:{0}% Tail percentage:{1}%", headPercentage, tailPercentage);
+        }
+
+        private static void Main(string[] args)
         {
             Console.WriteLine("welcome to basic core programs");
+            FlipCoin.FindFlipCoinCount();
             Console.ReadLine();
         }
     }
