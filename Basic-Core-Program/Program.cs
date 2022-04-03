@@ -6,19 +6,31 @@ using System.Threading.Tasks;
 
 namespace Basic_Core_Program
 {
-   public class QuotientandRemainder
+   public class SwapNumbers
    {
-        static void Main(string[] args)
+        public int first, second, temp = 0;
+
+        public void SwapTwoNumbers()
         {
-            int r, q, dividend,divisor;
-            Console.WriteLine("enter divident number");
-            dividend = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("enter divisor  number");
-            divisor = Convert.ToInt32(Console.ReadLine());
-            q = dividend / divisor;
-            r = dividend % divisor;
-            Console.WriteLine("quotient is:"+q);
-            Console.WriteLine("remainder is:"+r);
+
+            Console.WriteLine("Please enter first number");
+            first = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Please enter second number");
+            second = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Before swapping");
+            Console.WriteLine("Fitst:{0} second:{1}", first, second);
+            temp = first;
+            first = second;
+            second = temp;
+            Console.WriteLine("after swapping");
+            Console.WriteLine("Fitst:{0} second:{1}", first, second);
+        }
+
+        private static void Main(string[] args)
+        {
+            SwapNumbers swap = new SwapNumbers();
+            swap.SwapTwoNumbers();
             Console.ReadLine();
         }
     }
