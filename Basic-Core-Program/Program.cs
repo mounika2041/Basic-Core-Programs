@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 
 namespace Basic_Core_Program
 {
-    class LeapYear
-    { 
-       
+   public class QuotientandRemainder
+   {
         static void Main(string[] args)
         {
-            int year;
-            Console.WriteLine("enter a year");
-            year = Convert.ToInt32(Console.ReadLine());
-            if (year % 4 == 0)
-                Console.WriteLine("year is a leap year");
-            else
-                Console.WriteLine("year is not a leap year");
+            int r, q, dividend,divisor;
+            Console.WriteLine("enter divident number");
+            dividend = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter divisor  number");
+            divisor = Convert.ToInt32(Console.ReadLine());
+            q = dividend / divisor;
+            r = dividend % divisor;
+            Console.WriteLine("quotient is:"+q);
+            Console.WriteLine("remainder is:"+r);
             Console.ReadLine();
         }
     }
