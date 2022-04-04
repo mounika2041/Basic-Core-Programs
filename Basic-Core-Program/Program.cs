@@ -11,17 +11,14 @@ namespace Basic_Core_Program
       
         static void Main(string[] args)
         {
-            int  num;
-            Console.WriteLine("The harmonic series is 1/1+1/2+1/3+1/4+.......+1/n");
-            Console.WriteLine("================================");
-            Console.WriteLine("enter the value of N");
-            num = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter a number:");
+            int num = Convert.ToInt32(Console.ReadLine());
+           Console.WriteLine("Power of 2^" + num + " is: " + (Math.Pow(2, num)));
+           Console.WriteLine("Printing all till Power Value " + num);
+
             for (int i = 1; i <= num; i++)
             {
-                if (i<=num)
-
-                    Console.WriteLine("1/{0} +", i);
-                
+                Console.WriteLine("Power of 2^" + i + " is: " + (Math.Pow(2, i)));
             }
             Console.ReadLine();
         }
